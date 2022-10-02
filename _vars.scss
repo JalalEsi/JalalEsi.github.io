@@ -1,0 +1,19 @@
+//Variables 
+
+//-- Colors 
+$primary-color: rgb(0, 0, 0);
+$background-color : rgb(255, 255, 255);
+$heading-color: red;
+$sub-heading-color: rgb(46, 152, 88);
+$body-color : rgb(155, 158, 222); 
+$links-color : rgb(228, 222, 235);
+$links-color-hover : yellow;
+
+//-- Fonts
+$body-font : Helvetica, sans-serif; 
+
+
+@function color-text ($color) { // @fonction nom ($parametre)
+    @if (lightness($color) > 70) { @return #1d0d0d ; }
+    @else { @return white; }
+}

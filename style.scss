@@ -1,0 +1,59 @@
+@import 'vars';
+@import 'utilities' ;
+@import 'buttons' ;
+
+
+body {
+    background-color: $body-color;
+    font-family: $body-font;
+    line-height: 1.6; // disatnce entre les lignes
+}
+
+a {
+    color: text-color ($primary-color) ;
+   &:hover  { color: salmon  ; }
+    //&:active  { color : white }
+    //&:visited { color : black;}
+}
+
+
+.showcase {
+    background-color: $primary-color;
+    color: color-text($primary-color); // color : nom_fct ($parametre a recevoir)
+    height: 500px ;
+    padding: 25px;
+
+        nav {
+            @extend %dis-alig;
+            justify-content: space-between;
+            ul {
+                display: flex;
+                list-style-type: none;  // pour les Puces - . ...
+                li {
+                    padding: 20px;
+                }
+                a {
+                    &:hover { background-color : $links-color-hover; }
+                }
+            }
+        }
+
+    &-content {
+        @extend %dis-alig;
+        height: 100%;
+        justify-content: center ;
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+
+
+.footer {
+    text-align: center;
+
+}
+
+
